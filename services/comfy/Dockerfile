@@ -19,6 +19,8 @@ ENV USE_GGUF=$USE_GGUF USE_XFLUX=$USE_XFLUX ROOT=/stable-diffusion
 ENV CACHE=/home/app/.cache USE_CNAUX=$USE_CNAUX
 
 RUN apt-get update && apt-get install -y git && ([ "${USE_XFLUX}" = "true" ] && apt-get install -y libgl1-mesa-glx python3-opencv) && apt-get clean
+RUN apt-get install -y libgl1-mesa-dev
+RUN apt-get install -y libglib2.0-0
 
 ENV ROOT=/stable-diffusion
 RUN --mount=type=cache,target=/root/.cache/pip \
