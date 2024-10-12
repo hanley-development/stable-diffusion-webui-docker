@@ -2,7 +2,8 @@
 
 set -Eeuo pipefail
 
-mkdir -vp /data/config/comfy/custom_nodes
+CUSTOM_NODES="/data/config/comfy/custom_nodes"
+mkdir -vp "${CUSTOM_NODES}"
 
 declare -A MOUNTS
 
