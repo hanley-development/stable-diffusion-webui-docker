@@ -14,8 +14,10 @@ a111:
   controlnet: models/ControlNet
   gligen: models/GLIGEN
   clip: models/CLIPEncoder
-  ipadapter: ipadapter
-  embeddings: embeddings
+  animatediff_models: models/animatediff_models/
+  animatediff_motion_lora: models/animatediff_motion_lora/
+  ipadapter: models/ipadapter
+  embeddings: models/embeddings
   unet: models/unet
   clip_vision: models/clip_vision
   xlabs: models/xlabs
