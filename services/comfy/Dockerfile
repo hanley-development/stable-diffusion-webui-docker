@@ -30,7 +30,7 @@ RUN --mount=type=cache,target=/root/.cache/pip \
   bash -c 'VERSION=$(git describe --tags --abbrev=0) && \
   if [ "${USE_EDGE}" = "true" ]; then VERSION=$(git describe --abbrev=7); fi && \
   git reset --hard ${VERSION}' && \
-  pip install -r requirements.txt
+  pip install -r requirements.txt && \
   if [ "${USE_GGUF}" = "true" ]; then \
     git clone https://github.com/city96/ComfyUI-GGUF.git && \
     cd ComfyUI-GGUF && git checkout main && \
